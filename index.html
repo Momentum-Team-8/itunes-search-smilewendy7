@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+  <link rel = "stylesheet" href= "style.css">
   <title>Music Search</title>
 </head>
 
 <body>
   <h1>Awsome Music</h1>
+    <audio src="" class="player" id = "music-player" controls></audio>
+    <br>
+    <br>
     <form class = "search-form">
         <div class="search-field">
             <input type="text" class="form-field" id = "search-field" placeholder="Search for Artist" required>
+            <input type="reset" class="form-field" id = "search-reset">
         </div>
         <br>
         <div class="search-field">
