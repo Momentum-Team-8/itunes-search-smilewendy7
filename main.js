@@ -43,6 +43,11 @@ function searchSongs(){
             i = i + 1
         }
         // console.log("END: " + data.results[0].artworkUrl30)
+        // ***** when results are not found
+        console.log(data)
+        if(data.resultCount===0){
+        document.querySelector('#result-hearder').innerText = "Sorry, No results found."    
+        }
     })
 } 
 
@@ -103,17 +108,24 @@ function renderMusic(music, index) {
             src.value= music.previewUrl
 
             // add music name below the player
-            let musicTittle = document.getElementById("music -title")
-            musicTittle.innerText= "Now Playing:"+ music.artistName+ "----"+ music.trackName
-
-        
-        
-    
+            let musicTittle = document.getElementById("music-title")
+            musicTittle.innerText= "Now Playing :" + " " + music.artistName+ "----"+ music.trackName
     })
 }
+// floating audio player
 
+floatPlayer= document.querySelector('.floating-bar')
+windowPage= document.querySelector('.all')
+console.log(floatPlayer)
 
-
+windowPage.scroll(function(){
+    if(windowPage.scrollTop() >= 200){
+        floatPlayer.css({position: "fixed", left: "0", top:"o"})
+    }
+    else{
+        floatPlayer.css({position: "absolute", left: "0", top:"200px"})
+        }
+})
 
 
 
