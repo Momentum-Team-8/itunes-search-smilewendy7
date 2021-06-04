@@ -4,8 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+  <link rel = "stylesheet" href= "style.css">
   <title>Music Search</title>
 </head>
+
 <body>
+  <div class="all">
+    <h1 id= "top">Really Awsome Music Site</h1>
+      <div class="floating-bar">
+        <audio class="player" id = "music-player" controls autoplay></audio>
+        <div id= "music-title"></div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <form class = "search-form">
+          <div class="search-field">
+              <input type="text" class="form-field search-input"  id = "search-field" placeholder="Search for Artist" required>
+              <input type="reset" class="form-field" id = "search-reset">
+          </div>
+          <br>
+          <div class="search-field">
+              <button class="search-field" id= "search-button" type = "submit" >Search</button>
+          </div>
+      </form>
+
+      <section>
+        <h2 id = "result-hearder"></h2>
+        <div class="result-field">
+          <ul id="music-listing"></ul>
+        </div>
+      </section>
+  </div>
+  
 </body>
 </html>
