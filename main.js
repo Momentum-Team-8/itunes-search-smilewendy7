@@ -1,8 +1,5 @@
 //to do list: 
     // search + ???
-    //favicon where is it?
-    //add lines to seperate sections ... 
-    // get rid of the list dot 
 
 // const url = "https://proxy-itunes-api.glitch.me/search?"
 const url = "https://itunes.apple.com/search?"
@@ -31,31 +28,31 @@ function searchSongs(){
     fetch (url + "entity=song&" + "term="+ `${inputContent}`+ "&limit=36")
     .then(res => res.json())
     .then(data=> {
-        // console.log(data)
-        console.log(data)
+        console.log("whole data is here :", data)
         console.log("this is the url when searching", url + "entity=song&" + "term="+ `${inputContent}`+ "&limit=36")
 
-        let i = 0
         for (let result of data.results){
             // console.log(result)
             // console.log("here is data", result.artworkUrl100)
-            renderMusic(result, i)
-            i = i + 1
+            renderMusic(result)
         }
-        // console.log("END: " + data.results[0].artworkUrl30)
+
         // ***** when results are not found
-        console.log(data)
         if(data.resultCount===0){
         document.querySelector('#result-hearder').innerText = "Sorry, No results found."    
         }
     })
 } 
 
-// display photo and link for each of the song 
+// *********???????????????????????********* console.log(music)
 
-function renderMusic(music, index) {
+
+// display photo and link for each of the song 
+function renderMusic(music) {
+    // *********???????????????????????********* console.log(music)
+    console.log(music)
     const eachMusic= document.createElement('li')
-    eachMusic.setAttribute("id", `${index}`)
+    eachMusic.setAttribute("id", `${music.trackId}`)
     eachMusic.setAttribute("class", "each-music")
     musicListing.appendChild(eachMusic)
 
@@ -112,20 +109,20 @@ function renderMusic(music, index) {
             musicTittle.innerText= "Now Playing :" + " " + music.artistName+ "----"+ music.trackName
     })
 }
-// floating audio player
+// floating audio player ----- this part does not work!!!!
 
-floatPlayer= document.querySelector('.floating-bar')
-windowPage= document.querySelector('.all')
-console.log(floatPlayer)
+// floatPlayer= document.querySelector('.floating-bar')
+// windowPage= document.querySelector('.all')
+// console.log(floatPlayer)
 
-windowPage.scroll(function(){
-    if(windowPage.scrollTop() >= 200){
-        floatPlayer.css({position: "fixed", left: "0", top:"o"})
-    }
-    else{
-        floatPlayer.css({position: "absolute", left: "0", top:"200px"})
-        }
-})
+// windowPage.scroll(function(){
+//     if(windowPage.scrollTop() >= 200){
+//         floatPlayer.css({position: "fixed", left: "0", top:"o"})
+//     }
+//     else{
+//         floatPlayer.css({position: "absolute", left: "0", top:"200px"})
+//         }
+// })
 
 
 
