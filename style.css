@@ -1,31 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+*{
+   text-align:center;
+   /* -moz-box-align: center; */
+   /* box-sizing: initial; */
+
+}
+
+.all{
+    margin: 50px;
+    background-image: url(/background_bolgo.jpeg);
+    font-family: limelight;
+}
 
 
-/* img and play button */
-/* .each-music{
-    position: relative;
+.floating-bar {
+    margin: 0px;
+    padding:0px;
+}
 
-} */
 
-/* .each-music img {
-    width: 100%;
-    height: auto;
-} */
-
-/* .each-music .btn{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
+/* search button */
+.search-field{
     font-size: 16px;
     padding: 12px 24px;
-    border: none;
+    
+}
+
+#search-reset{
+    font-size: 14px;
+    padding: 12px 24px;
+    
+}
+.search-input{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/* img and play button */
+#music-listing{
+    background-color:rgba(255,255,255,0.2);
+    margin: 5px;
+    padding: 5px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-content: center;
+    /* backdrop-filter: blur(5px); */
+}
+
+.each-music{
+    position: relative;
+    width: 100%;
+    width: 200px;
+    padding: 5px;
+    margin: 50px;
+}
+.each-music img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+
+.each-music .btn{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:rgba(255,255,255,0.2);
+    color:white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 50px;
     cursor: pointer;
-    border-radius: 5px;
+    text-align: center;
 }
 
 .each-music .btn:hover {
     background-color: black;
-  } */
+  }
+
+.each-audio{
+    width: 200px;
+    height: 20px;
+  }
+
+.result-field>ul>li{
+    list-style: none;
+}
+
+/* fonts */
+
+#top{
+    padding: 20px;
+    font-size: 60px;
+    color: #454545
+}
+
+#artist-name{
+    font-size: 20px;
+}
+
+#music-name{
+    font-size: 13px;
+}
+
+#result-header{}

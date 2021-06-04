@@ -9,27 +9,33 @@
 </head>
 
 <body>
-  <h1>Awsome Music</h1>
-    <audio src="" class="player" id = "music-player" controls></audio>
-    <br>
-    <br>
-    <form class = "search-form">
-        <div class="search-field">
-            <input type="text" class="form-field" id = "search-field" placeholder="Search for Artist" required>
-            <input type="reset" class="form-field" id = "search-reset">
-        </div>
-        <br>
-        <div class="search-field">
-            <button class="search-field" type = "submit" >Search</button>
-        </div>
-    </form>
-
-    <section>
-      <h2 id = "result-hearder"></h2>
-      <div class="result-field">
-        <ul id="music-listing"></ul>
+  <div class="all">
+    <h1 id= "top">Really Awsome Music Site</h1>
+      <div class="floating-bar">
+        <audio class="player" id = "music-player" controls></audio>
+        <div id= "music -title"></div>
       </div>
-    </section>
+      <br>
+      <hr>
+      <br>
+      <form class = "search-form">
+          <div class="search-field">
+              <input type="text" class="form-field search-input"  id = "search-field" placeholder="Search for Artist" required>
+              <input type="reset" class="form-field" id = "search-reset">
+          </div>
+          <br>
+          <div class="search-field">
+              <button class="search-field" type = "submit" >Search</button>
+          </div>
+      </form>
+
+      <section>
+        <h2 id = "result-hearder"></h2>
+        <div class="result-field">
+          <ul id="music-listing"></ul>
+        </div>
+      </section>
+  </div>
   
 </body>
 </html>
